@@ -27,14 +27,7 @@ tags:
 > * At the member level—public, private, protected, or package-private (no explicit modifier).
 
 <center>
-
-Modifier      | Class  |  Package  | Subclass  |  World
-------------- | ------- | ------------ | ----------- | --------
-public          | Y         | Y               | Y              | Y
-protected    | Y         | Y               | Y              | N
-no modifier  | Y         | Y               | N              | N
-private         | Y         | N               | N              | N
-
+![Java Data Types](https://qph.fs.quoracdn.net/main-qimg-07b6e84dcef8589f6fd02323f103a4cf.webp)
 </center>
 
 ### Class
