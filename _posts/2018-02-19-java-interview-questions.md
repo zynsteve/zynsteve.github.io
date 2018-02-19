@@ -1,6 +1,6 @@
 ---
 title: Java Interview Questions
-description: A summary of popular Java interview questions
+description: A summary of popular Java interview questions.
 categories:
  - Interview
 tags:
