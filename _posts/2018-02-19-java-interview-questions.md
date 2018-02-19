@@ -8,22 +8,16 @@ tags:
 ---
 
 
-## Basics
+## 1. Basics
 
 ### Data Type
 * Primitive Data Types
-    * byte
-    * short
-    * int
-    * long
-    * char
-    * float
-    * double
-    * boolean
+
+    byte, short, int, long, char, float, double, boolean
+    
 * Object Data Types
-    * class
-    * interface
-    * array
+
+    class, interface, array
 
 ![Java Data Types](http://i1.wp.com/javafrombasics.com/wp-content/uploads/2016/06/data-types.gif?zoom=2&fit=720%2C540)
     
@@ -48,7 +42,7 @@ private         | Y         | N               | N              | N
 ### Interface
 
 
-## Object Oriented Programming
+## 2. Object Oriented Programming
 
 ### Encapsulation
 
