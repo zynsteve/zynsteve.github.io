@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
+title: Yinan Zhu
 subtitle:
 description:
-author: John Doe
+author: Yinan Zhu
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
@@ -225,14 +225,13 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  GitHub: https://github.com/zynsteve
+  LinkedIn: https://www.linkedin.com/in/yinan-zhu/
 
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/avatar.gif
 
 
 # Table Of Contents in the Sidebar
