@@ -26,9 +26,7 @@ tags:
 > * At the top level—public, or package-private (no explicit modifier).
 > * At the member level—public, private, protected, or package-private (no explicit modifier).
 
-<center>
 ![Java Data Types](https://qph.fs.quoracdn.net/main-qimg-07b6e84dcef8589f6fd02323f103a4cf.webp)
-</center>
 
 ### Class
 
