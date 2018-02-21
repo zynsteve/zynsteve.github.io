@@ -1,6 +1,6 @@
 ---
 title: Java Interview Questions
-description: A summary of popular Java interview questions.
+description: This a summary of popular Java interview questions.
 categories:
  - Interview
 tags:
@@ -11,11 +11,11 @@ tags:
 ## 1. Basics
 
 ### Data Type
-* Primitive Data Types
+#### Primitive Data Types
 
     byte, short, int, long, char, float, double, boolean
     
-* Object Data Types
+#### Object Data Types
 
     class, interface, array
 
@@ -23,8 +23,8 @@ tags:
     
 ### Access Modifier
 > Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:
-> * At the top level—public, or package-private (no explicit modifier).
-> * At the member level—public, private, protected, or package-private (no explicit modifier).
+> - At the top level—public, or package-private (no explicit modifier).
+> - At the member level—public, private, protected, or package-private (no explicit modifier).
 
 ![Java Data Types](https://qph.fs.quoracdn.net/main-qimg-07b6e84dcef8589f6fd02323f103a4cf.webp)
 
@@ -40,16 +40,16 @@ tags:
 ### Inheritance
 
 ### Polymorphism
-* Overloading
+#### Overloading
 
     static / compile time polymorphism
 
-* Overriding
+#### Overriding
 
     dynamic / run time polymorphism
 
 ![Java Data Types](https://www.programcreek.com/wp-content/uploads/2009/02/overloading-vs-overriding.png)
 
 ### Design Pattern
-* Singleton Pattern
-* Factory Pattern
+#### Singleton Pattern
+#### Factory Pattern
