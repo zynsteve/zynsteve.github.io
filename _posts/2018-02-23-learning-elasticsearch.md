@@ -1,6 +1,6 @@
 ---
 title: Learning Elasticsearch
-description: Learning Elasticsearch.
+description: Road to Elasticsearch.
 categories:
  - Tutorial
 tags:
