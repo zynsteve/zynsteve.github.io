@@ -1,5 +1,5 @@
 ---
-title: Java Learing Path
+title: Java Learning Path
 description: We all love Java!
 categories:
  - Java
