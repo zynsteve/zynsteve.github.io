@@ -1,8 +1,8 @@
 ---
-title: Java Interview Questions
-description: This a summary of popular Java interview questions.
+title: Java Learing Path
+description: We all love Java!
 categories:
- - Interview
+ - Java
 tags:
  - Java
 ---
@@ -28,9 +28,7 @@ class, interface, array
 
 ![Java Data Types](https://qph.fs.quoracdn.net/main-qimg-07b6e84dcef8589f6fd02323f103a4cf.webp)
 
-### Class
-
-### Interface
+### Abstract Class & Interface
 
 
 ## 2. Object Oriented Programming
