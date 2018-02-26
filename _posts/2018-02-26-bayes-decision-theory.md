@@ -18,12 +18,17 @@ $$P(Y = i|X = x) = \frac{p(x|Y = i)P(Y = i)}{p(x)} = \frac{p(x|Y = i)P(Y = i)}{p
 $$\epsilon[\psi] = P(\psi(X) \neq Y)$$
 
 ### Conditional Classification Error
+$$P(\psi(X) \neq Y|X = x)$$
+$$\eta(X) = P(Y = 1|X = x)$$
+$$\epsilon[\psi] = P(\psi(X) \neq Y) = E[P(\psi(X) \neq Y|X)]$$
 ### Classification Error
 ### Class-Specific Error Rates
 ### Testing Error Rates
 ### Optimal Classification
 
 ## Bayes Error
+$$\epsilon^* = E[min\lbrace\eta(X), 1 - \eta(X)\rbrace]$$
+$$\epsilon^*\leq\frac{1}{2}$$
 
 ## Bayes Decision Theory
 
