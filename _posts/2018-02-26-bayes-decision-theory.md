@@ -15,7 +15,7 @@ $$P(Y = i|X = x) = \frac{p(x|Y = i)P(Y = i)}{p(x)} = \frac{p(x|Y = i)P(Y = i)}{p
 Formally, a classifier is a (measurable) function $\psi:R^d\to\lbrace0, 1\rbrace$ from the feature space Rd into the binary set of labels $\lbrace0, 1\rbrace$. Therefore, a classifier partitions the feature space into two regions.
 
 The classification error is the probability of misclassification:<br/>
-{% centerquote %}$$\epsilon[\psi] = P(\psi(X) \neq Y)$${% endcenterquote %}
+<blockquote class="blockquote-center">$$\epsilon[\psi] = P(\psi(X) \neq Y)$$</blockquote>
 
 ### Conditional Classification Error
 $$P(\psi(X) \neq Y|X = x)$$<br/>
@@ -32,11 +32,11 @@ $$\epsilon^*\leq\frac{1}{2}$$
 
 ## Bayes Decision Theory
 The expected loss upon observing $X = x$ is<br/>
-{% centerquote %}$$R[\alpha(x) = \alpha_i] = \sum_{j = 0}^{c-1}\lambda_{ij}P(Y = j| X = x)$${% endcenterquote %}<br/>
+<blockquote class="blockquote-center">$$R[\alpha(x) = \alpha_i] = \sum_{j = 0}^{c-1}\lambda_{ij}P(Y = j| X = x)$$</blockquote><br/>
 This is called the conditional risk given $X = x$
 
 The overall risk is given by<br/>
-{% endcenterquote %}$$R = E[R(\alpha(X))] = \int_{x\in R^d} {R(\alpha(x))p(x)}dx$${% endcenterquote %}
+<blockquote class="blockquote-center">$$R = E[R(\alpha(X))] = \int_{x\in R^d} {R(\alpha(x))p(x)}dx$$</blockquote>
 
 To minimize R, we select $\alpha(x) = \alpha_i$ such that $R[\alpha(x) = \alpha_i]$ is minimum, at each value $x\in R^d$. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk $R^∗$.
 
