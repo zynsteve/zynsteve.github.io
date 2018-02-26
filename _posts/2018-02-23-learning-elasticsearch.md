@@ -1,7 +1,6 @@
 ---
 title: Learning Elasticsearch
 description: Road to Elasticsearch.
-![Learning Elasticsearch](https://i0.wp.com/thecuriousdev.org/wp-content/uploads/2018/01/Elasticsearch-Logo-Color-V.jpg.png?fit=3422%2C1781&ssl=1)
 categories:
  - Tutorial
 tags:
@@ -9,6 +8,7 @@ tags:
 ---
 
 
+![Learning Elasticsearch](https://i0.wp.com/thecuriousdev.org/wp-content/uploads/2018/01/Elasticsearch-Logo-Color-V.jpg.png?fit=3422%2C1781&ssl=1)
 ## Introduction
 > Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 

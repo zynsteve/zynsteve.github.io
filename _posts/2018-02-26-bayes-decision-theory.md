@@ -1,7 +1,6 @@
 ---
 title: Bayes Decision Theory
 description: Learning Bayes Decision Theory.
-![Bayes Decision Theory](https://onlinecourses.science.psu.edu/stat857/sites/onlinecourses.science.psu.edu.stat857/files/lesson10/image_02.gif)
 categories:
 - Tutorial
 tags:
@@ -9,6 +8,7 @@ tags:
 ---
 
 
+![Bayes Decision Theory](https://onlinecourses.science.psu.edu/stat857/sites/onlinecourses.science.psu.edu.stat857/files/lesson10/image_02.gif)
 ## Bayes Theorem
 <block class="block-center">$$P(Y=i|X=x)=\frac{p(x|Y=i)P(Y=i)}{p(x)}=\frac{p(x|Y=i)P(Y=i)}{p(x|Y=0)P(Y=0)+p(x|Y=1)P(Y=1)}$$</block>
 

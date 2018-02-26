@@ -1,7 +1,6 @@
 ---
 title: Java Learning Path
 description: We all love Java!
-![Java Learning Path](https://worldvectorlogo.com/logo/java-4)
 categories:
  - Java
 tags:
@@ -9,6 +8,7 @@ tags:
 ---
 
 
+![Java Learning Path](https://worldvectorlogo.com/logo/java-4)
 ## 1. Basics
 
 ### Data Type
