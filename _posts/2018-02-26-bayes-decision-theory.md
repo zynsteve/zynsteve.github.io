@@ -33,6 +33,13 @@ $$\epsilon^*\leq\frac{1}{2}$$
 ## Bayes Decision Theory
 The expected loss upon observing $X = x$ is
 $$R[\alpha(x) = \alpha_i] = \sum_{j = 0}^{c-1}\lambda_{ij}P(Y = j| X = x)$$
+This is called the conditional risk given $X = x$
+The overall risk is given by
+$$R = E[R(\alpha(X))] = \int_{x∈R^d} {R(\alpha(x))p(x)} \,{\rm d}x$$
+
+To minimize R, we select $\alpha(x) = \alpha_i$ such that
+
+R[α(x) = αi] is minimum, at each value x ∈ Rd. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk R∗.
 
 ## Discriminant Functions
 
