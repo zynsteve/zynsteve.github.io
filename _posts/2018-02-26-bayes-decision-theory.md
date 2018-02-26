@@ -14,7 +14,7 @@ tags:
 ## Classifiers and Classification Error
 Formally, a classifier is a (measurable) function $\psi:R^d\to\lbrace0, 1\rbrace$ from the feature space Rd into the binary set of labels $\lbrace0, 1\rbrace$. Therefore, a classifier partitions the feature space into two regions.
 
-The classification error is the probability of misclassification:<br/>
+The classification error is the probability of misclassification:
 <block class="block-center">$$\epsilon[\psi] = P(\psi(X) \neq Y)$$</block>
 
 ### Conditional Classification Error
@@ -31,11 +31,11 @@ $$\epsilon^*=E[min\lbrace\eta(X),1-\eta(X)\rbrace]$$<br/>
 $$\epsilon^*\leq\frac{1}{2}$$
 
 ## Bayes Decision Theory
-The expected loss upon observing $X=x$ is<br/>
-<block class="block-center">$$R[\alpha(x)=\alpha_i] = \sum_{j=0}^{c-1}\lambda_{ij}P(Y=j|X=x)$$</block><br/>
+The expected loss upon observing $X=x$ is
+<block class="block-center">$$R[\alpha(x)=\alpha_i] = \sum_{j=0}^{c-1}\lambda_{ij}P(Y=j|X=x)$$</block>
 This is called the conditional risk given $X=x$
 
-The overall risk is given by<br/>
+The overall risk is given by
 <block class="block-center">$$R=E[R(\alpha(X))]=\int_{x\in R^d}{R(\alpha(x))p(x)}dx$$</block>
 
 To minimize R, we select $\alpha(x)=\alpha_i$ such that $R[\alpha(x)=\alpha_i]$ is minimum, at each value $x\in R^d$. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk $R^∗$.
