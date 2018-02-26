@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![Java Learning Path](https://worldvectorlogo.com/logo/java-4)
+![Java Learning Path](https://www.myce.com/news/oracle-releases-updates-270-vulnerabilities-including-java-virtualbox-81262/)
 ## 1. Basics
 
 ### Data Type
