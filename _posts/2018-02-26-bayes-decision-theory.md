@@ -1,6 +1,7 @@
 ---
 title: Bayes Decision Theory
 description: Learning Bayes Decision Theory.
+![Bayes Decision Theory](https://onlinecourses.science.psu.edu/stat857/sites/onlinecourses.science.psu.edu.stat857/files/lesson10/image_02.gif)
 categories:
 - Tutorial
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Java Learning Path
 description: We all love Java!
+![Java Learning Path](https://worldvectorlogo.com/logo/java-4)
 categories:
  - Java
 tags:
@@ -19,14 +20,14 @@ byte, short, int, long, char, float, double, boolean
 
 class, interface, array
 
-![Java Data Types](http://i1.wp.com/javafrombasics.com/wp-content/uploads/2016/06/data-types.gif?zoom=2&fit=720%2C540)
+![Data Types](http://i1.wp.com/javafrombasics.com/wp-content/uploads/2016/06/data-types.gif?zoom=2&fit=720%2C540)
     
 ### Access Modifier
 > Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:
 > - At the top level—public, or package-private (no explicit modifier).
 > - At the member level—public, private, protected, or package-private (no explicit modifier).
 
-![Java Data Types](https://qph.fs.quoracdn.net/main-qimg-07b6e84dcef8589f6fd02323f103a4cf.webp)
+![Access Modifier](https://qph.fs.quoracdn.net/main-qimg-07b6e84dcef8589f6fd02323f103a4cf.webp)
 
 ### Abstract Class & Interface
 
@@ -46,7 +47,7 @@ static / compile time polymorphism
 
 dynamic / run time polymorphism
 
-![Java Data Types](https://www.programcreek.com/wp-content/uploads/2009/02/overloading-vs-overriding.png)
+![Overloading and Overriding](https://www.programcreek.com/wp-content/uploads/2009/02/overloading-vs-overriding.png)
 
 ### Design Pattern
 #### Singleton Pattern

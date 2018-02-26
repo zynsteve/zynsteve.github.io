@@ -1,6 +1,7 @@
 ---
 title: Learning Elasticsearch
 description: Road to Elasticsearch.
+![Learning Elasticsearch](https://i0.wp.com/thecuriousdev.org/wp-content/uploads/2018/01/Elasticsearch-Logo-Color-V.jpg.png?fit=3422%2C1781&ssl=1)
 categories:
  - Tutorial
 tags:
