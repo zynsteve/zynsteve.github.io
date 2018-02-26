@@ -53,11 +53,24 @@ If the classes are equally-likely, more terms can be dropped and we obtain:
 <block class="block-center">$$g_i(x)=-\frac{1}{2}{||x-\mu_i||^2}$$</block>
 This is called the optimal Nearest-Mean Classifier.
 ### Linear Discriminant
+Case 2: Equal arbitrary covariance matrices.
 ### Quadratic Discriminant
 
 ## Alternative Distance Measures
 ### Kolmogorov’s Variational Distance
 ### Nearest-Neighbor Distance
+The Nearest-Neighbor Distance is given by
+<block class="block-center">$$\epsilon^*=E[2\eta(x)(1-\eta(x))]$$</block>
+The following distribution-free inequalities hold:
+<block class="block-center">$$\epsilon^*\leq \epsilon_{NN}\leq 2\epsilon^*(1-\epsilon^*)$$</block>
+Since 0 ≤ 2η(x)(1 − η(x)) ≤ 1, for all x, we have
+<block class="block-center">$$0\leq\epsilon_{NN}\leq\frac{1}{2}$$</block>
+Furthermore, it is clear that
+<block class="block-center">$$\epsilon_{NN}=0\Leftrightarrow\eta(x)\in\lbrace0,1\rbrace w.prob.1\Leftrightarrow\epsilon^*=0$$</block>
+<block class="block-center">$$\epsilon_{NN}=\frac{1}{2}\Leftrightarrow\eta(x)=\frac{1}{2}w.prob.1\Leftrightarrow\epsilon^*=\frac{1}{2}$$</block>
+so $\epsilon_{NN}$ carries plenty of information about $\epsilon^*$.
 ### Mahalanobis Distance
-
+The Mahalanobis distance, defined previously as
+<block class="block-center">$$\delta=\sqrt{(\mu_1-\mu_0)^T\Sigma^{-1}(\mu_1-\mu_0)}$$</block>
+is a an alternative distance measure that is related to the Bayes error.
 ## F-errors
