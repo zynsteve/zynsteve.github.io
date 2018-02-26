@@ -31,6 +31,9 @@ $$\epsilon^* = E[min\lbrace\eta(X), 1 - \eta(X)\rbrace]$$
 $$\epsilon^*\leq\frac{1}{2}$$
 
 ## Bayes Decision Theory
+$$R[\alpha(x) = \alpha_i] = \sum_{j = 0}^{c-1}\lambda_{ij}P(Y = j| X = x)$$
+c−1 j=0
+λijP(Y = j|X = x)
 
 ## Discriminant Functions
 
