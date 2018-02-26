@@ -9,7 +9,7 @@ tags:
 
 
 ## Bayes Theorem
-<blockquote class="blockquote-center">$$P(Y = i|X = x) = \frac{p(x|Y = i)P(Y = i)}{p(x)} = \frac{p(x|Y = i)P(Y = i)}{p(x|Y = 0)P(Y = 0) + p(x|Y = 1)P(Y = 1)}$$</blockquote>
+<block class="blockquote-center">$$P(Y = i|X = x) = \frac{p(x|Y = i)P(Y = i)}{p(x)} = \frac{p(x|Y = i)P(Y = i)}{p(x|Y = 0)P(Y = 0) + p(x|Y = 1)P(Y = 1)}$$</block>
 
 ## Classifiers and Classification Error
 Formally, a classifier is a (measurable) function $\psi:R^d\to\lbrace0, 1\rbrace$ from the feature space Rd into the binary set of labels $\lbrace0, 1\rbrace$. Therefore, a classifier partitions the feature space into two regions.
