@@ -39,22 +39,40 @@ $$=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
 $$=E[P(\psi(X)\neq Y|X)]$$</block>
 Therefore, knowing the error at each point $x\in R^d$ of the feature space, plus the “weight” $p(x)$, is enough to determine the overall classification error.
 ### Classification Error
+Using the previous formulas, one can further develop the classification error as:
 <block class="block-center">$$\epsilon[\psi]=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
 $$=\int_{x\in R^d}(I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X)))p(x)dx$$
-$$=\int_{x|\psi(x)=0}\eta(X)p(x)dx+\int_{x|\psi(x)=1}(1-\eta(X))p(x)dx$$</block>
+$$=\int_{\lbrace x|\psi(x)=0\rbrace}\eta(X)p(x)dx+\int_{\lbrace x|\psi(x)=1\rbrace}(1-\eta(X))p(x)dx$$</block>
+From Bayes theorem,
+<block class="block-center">$$\eta(x)p(x)=p(x|Y=1)P(Y=1)$$
+$$(1-\eta(x))p(x)=p(x|Y=0)P(Y=0)$$</block>
+Replacing these into the previous formula yields an alternative equation for the classification error:
+<block class="block-center">$$\epsilon[\psi]=\int_{\lbrace x|\psi(x)=0\rbrace}P(x|Y=1)P(Y=1)dx+\int_{\lbrace x|\psi(x)=1\rbrace}P(x|Y=0)P(Y=0)dx$$</block>
 ### Class-Specific Error Rates
+We can rewrite the previous equation as:
+<block class="block-center">$$\epsilon[\psi]=(1-c)\epsilon^0[\psi]+c\epsilon^1[\psi]$$</block>
+where $c=P(Y=1)$, and
+<block class="block-center">$$\epsilon^0[\psi]=\int_{\lbrace x|\psi(x)=1\rbrace}P(x|Y=0)dx$$
+$$\epsilon^1[\psi]=\int_{\lbrace x|\psi(x)=0\rbrace}P(x|Y=1)dx$$</block>
+are the class-specific error rates. Given $\psi$, these error rates do not depend on the prior probabilities c and $1 − c$, while the overall error $\epsilon^0[\psi]$ clearly does.
 ### Testing Error Rates
 ### Optimal Classification
-
+(DGL Theorem 2.1) The classifier with minimal error is <block class="block-center">$$\psi^∗(x) = argmax_i P(Y=i|X=x)=I_{\eta(x)>\frac{1}{2}}.$$</block>
+This is the MAP (Maximum A-Posteriori) classifier, more commonly known as the Bayes classifier.</br>
+By Bayes theorem, we have, equivalently,
+<block class="block-center">$$\psi^∗(x) = argmax_i P(x|Y=i)P(Y=i)$$</block>
 ## Bayes Error
-$$\epsilon^*=E[min\lbrace\eta(X),1-\eta(X)\rbrace]$$<br/>
-$$\epsilon^*\leq\frac{1}{2}$$
-
+The error of the Bayes classifier $\epsilon^*=\epsilon[\psi^*]$ is a fundamental quantity in PR, known as the Bayes error.</br>
+Note that the Bayes classifier is given by<br/>
+<block class="block-center">$$\psi^*(x)=\begin{cases}1, \eta(x)>1-\eta(x)\quad(\eta(x)>\frac{1}{2})\\0,\eta(x)\leq1-\eta(x)\quad(\eta(x)\leq\frac{1}{2})\end{cases}$$</block>
+Therefore<br/>
+$$\epsilon^*=\int_{\eta(x)<1-\eta(x)}\eta(X)p(x)dx+\int_{\eta(x)\geq1-\eta(x)}(1-\eta(X))p(x)dx$$
+$$=E[min\lbrace\eta(X),1-\eta(X)\rbrace]$$<br/>
+In particular, we always have $\epsilon^*\leq\frac{1}{2}$.
 ## Bayes Decision Theory
 The expected loss upon observing $X=x$ is
 <block class="block-center">$$R[\alpha(x)=\alpha_i] = \sum_{j=0}^{c-1}\lambda_{ij}P(Y=j|X=x)$$</block>
-This is called the conditional risk given $X=x$
-
+This is called the conditional risk given $X=x$.</br>
 The overall risk is given by
 <block class="block-center">$$R=E[R(\alpha(X))]=\int_{x\in R^d}{R(\alpha(x))p(x)}dx$$</block>
 
