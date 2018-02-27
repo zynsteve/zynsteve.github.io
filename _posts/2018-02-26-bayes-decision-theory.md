@@ -45,6 +45,10 @@ Using the previous formulas, one can further develop the classification error as
 $$=\int_{x\in R^d}(I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X)))p(x)dx$$
 $$=\int_{\lbrace x|\psi(x)=0\rbrace}\eta(X)p(x)dx+\int_{\lbrace x|\psi(x)=1\rbrace}(1-\eta(X))p(x)dx$$</block>
 From Bayes theorem,
+<block class="block-center">$$P(Y=i|X=x)=\frac{p(x|Y=i)P(Y=i)}{p(x)}$$</block>
+we have
+<block class="block-center">$$P(Y=i|X=x)p(x)=p(x|Y=i)P(Y=i)$$</block>
+Therefore,
 <block class="block-center">$$\eta(x)p(x)=p(x|Y=1)P(Y=1)$$
 $$(1-\eta(x))p(x)=p(x|Y=0)P(Y=0)$$</block>
 Replacing these into the previous formula yields an alternative equation for the classification error:
@@ -69,7 +73,7 @@ By Bayes theorem, we have, equivalently,
 ## Bayes Error
 The error of the Bayes classifier
 <block class="block-center">$$\epsilon^*=\epsilon[\psi^*]$$</block>
-is a fundamental quantity in PR, known as the Bayes error.</br>
+is a fundamental quantity in PR, known as the Bayes error.<br/>
 Note that the Bayes classifier is given by
 <block class="block-center">$$\psi^*(x)=\begin{cases}1, \eta(x)>1-\eta(x)\quad(\eta(x)>\frac{1}{2})\\0,\eta(x)\leq1-\eta(x)\quad(\eta(x)\leq\frac{1}{2})\end{cases}$$</block>
 Therefore
@@ -81,11 +85,11 @@ In particular, we always have $\epsilon^*\leq\frac{1}{2}$.
 Suppose that upon observing X = x one takes an action α(x) in a finite set of a possible actions<br/>
 <block class="block-center">$$\alpha(x)\in\lbraceα_0,α_1,...,α_{a−1}\rbrace$$</block>
 Suppose there are c states of nature (i.e., classes), $Y \in\lbrace0,1,...,c−1\rbrace$. Each action incurs a loss <block class="block-center">$λ_{ij} = \text{cost of taking action αi when true state of nature is j}$</block>
-Action $i$ may be simply deciding that the true state of nature is $i$, but we may have $a>c$, in which case one of the extra actions might be rejecting to make a decision.</br>
+Action $i$ may be simply deciding that the true state of nature is $i$, but we may have $a>c$, in which case one of the extra actions might be rejecting to make a decision.<br/>
 The losses indicate, for example, the cost of making incorrect decisions.
 The expected loss upon observing $X=x$ is
 <block class="block-center">$$R[\alpha(x)=\alpha_i] = \sum_{j=0}^{c-1}\lambda_{ij}P(Y=j|X=x)$$</block>
-This is called the conditional risk given $X=x$.</br>
+This is called the conditional risk given $X=x$.<br/>
 The overall risk is given by
 <block class="block-center">$$R=E[R(\alpha(X))]=\int_{x\in R^d}{R(\alpha(x))p(x)}dx$$</block>
 To minimize R, we select $\alpha(x)=\alpha_i$ such that $R[\alpha(x)=\alpha_i]$ is minimum, at each value $x\in R^d$. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk $R^∗$.
@@ -98,7 +102,7 @@ The $i−th$ decision region is determined by
 The loci of ties among largest discriminant functions determine the decision surfaces.
 <block class="block-center">$$g_i(x)=\ln p(x|Y=i)+\ln P(Y=i),\quad i=0,1,\cdots,c-1$$</block>
 A set of discriminant functions determines a unique classifier, but the converse is not true: the same classifier can be determined by multiple sets of discriminant functions.<br/>
-Monotonic transformations to the discriminant functions do not alter the classifier.</br>
+Monotonic transformations to the discriminant functions do not alter the classifier.<br/>
 For example, it is often useful to take logs and represent the Bayes classifier through the discriminant functions
 <block class="block-center">$$g_i(x)=\ln p(x|Y=i)+\ln P(Y=i),\quad i=0,1,...,c−1$$</block>
 
