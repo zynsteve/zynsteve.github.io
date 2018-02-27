@@ -134,7 +134,7 @@ In other words,
 <block class="block-center">$$p(x|Y=i)=(2\pi)^{-\frac{d}{2}}|\Sigma_i|^{-\frac{1}{2}}exp(-\frac{1}{2}(x-\mu_i)^T\Sigma_i^{-1}(x-\mu_i))$$</block>
 
 ### Nearest Mean Classifier
-Case 1: Equal spherical covariance matrices.
+Case 1: Equal spherical covariance matrices.<br/>
 In this case,
 <block class="block-center">$$\Sigma_i=\sigma^2I_d\Rightarrow\Sigma^{−1}=\frac{1}{\sigma^2}I_d,\quad i=0,1,...,c−1$$</block>
 The constant term $\ln|\Sigma_i|=−2d\ln\sigma$ can be dropped, leading to
@@ -145,12 +145,56 @@ This is called the optimal Nearest-Mean Classifier.
 ![Nearest Mean Classifier](https://ask.julyedu.com/uploads/answer/20150203/212bec42a04acaf238e72b613dba8371.png)
 
 ### Linear Discriminant
-Case 2: Equal arbitrary covariance matrices.
+Case 2: Equal arbitrary covariance matrices.<br/>
 In this case,
 <block class="block-center">$$\Sigma_i=\Sigma,\quad i=0,1,...,c−1$$</block>
+Once again, the constant term $\ln|\Sigma_i|=\ln|\Sigma|$ can be dropped, resulting in
+<block class="block-center">$$g_i(x)=−\frac{1}{2}(x−\mu_i)^T\Sigma^{−1}(x−\mu_i) + \ln P(Y=i)$$</block>
+This is apparently a quadratic discriminant; however the quadratic term is $x^T\Sigma^{−1}x$, which is constant and can be dropped, leading to a linear discriminant:
+<block class="block-center">$$g_i(x)=a_i^Tx+b_i$$</block>
+In the case c = 2, the single discriminant is given by:
+<block class="block-center">$$g_i(x)=a^Tx+b$$</block>
+Clearly, the equation $g(x) = 0$ defines a hyperplane decision boundary.<br/>
+If the classes are equally-likely, then the hyperplane is given by:
+<block class="block-center">$$g(x)=a^T(x−x_0)=0$$</block>
+where
+<block class="block-center">$$a=\Sigma^{−1}(\mu_1−\mu_0)$$
+$$x_0 = \frac{1}{2}(μ_1+μ_0)$$</block>
+that is, the hyperplane must pass through the midpoint between the means, but it is not in general perpendicular to the axis joining the means (as was true for the nearest-mean classifier in case 1), because $\Sigma^{−1}(\mu_1−\mu_0)$ is not in general parallel to $(\mu_1−\mu_0)$, unless the latter is an eigenvector of $\Sigma^{−1}$ (and thus of $\Sigma$).<br/>
+Using the properties of the Gaussian distribution,
+<block class="block-center">$$g(X)|Y=0\sim a^TX+b|Y=0\sim N(a^Tμ_0+b,a^T\Sigma a)$$
+$$g(X)|Y=1\sim a^TX+b|Y=1\sim N(a^Tμ_1+b,a^T\Sigma a)$$</block>
+It follows that
+<block class="block-center">$$\epsilon^0[\psi^*]=P(g(X)>0|Y=0)=\Phi\left(\frac{a^T\mu_0+b}{\sqrt{a^T\Sigma a}}\right)$$
+$$\epsilon^1[\psi^*]=P(g(X)\leq0|Y=1)=\Phi\left(-\frac{a^T\mu_1+b}{\sqrt{a^T\Sigma a}}\right)$$</block>
+where $\Phi(x)$ is the CDF of a $N(0,1)$ distribution.<br/>
+Substituting the values of a and b leads to
+<block class="block-center">$$\epsilon^0[\psi^*]=\Phi\left(\frac{-\frac{1}{2}\delta^2+k}{\delta}\right)$$
+$$\epsilon^1[\psi^*]=\Phi\left(\frac{-\frac{1}{2}\delta^2-k}{\delta}\right)$$</block>
+where
+<block class="block-center">$$k=\ln(P(Y=1)/P(Y=0))$$[\psi^*]
+$$\delta=(\mu_1−\mu_0)^T\Sigma^{−1}(\mu_1−\mu_0)$$</block>
+is the Mahalanobis distance between the populations.<br/>
+The Bayes error is given by
+<block class="block-center">$$\epsilon^*=(1-c)\epsilon^0[\psi^*]+c\epsilon^1[\psi^*]$$
+$$=(1-c)\Phi\left(\frac{-\frac{1}{2}\delta^2+k}{\delta}\right)+c\Phi\left(\frac{-\frac{1}{2}\delta^2-k}{\delta}\right)$$</block>
+In the case $P(Y=0)=P(Y=1)=\frac{1}{2}$, the previous expressions reduce to:
+<block class="block-center">$$\epsilon^0[\psi^∗] = \epsilon^1[\psi^*]=\epsilon^*=\Phi\left(-\frac{\delta}{2}\right)$$</block>
 
 ### Quadratic Discriminant
-Case 3: Distinct arbitrary covariance matrices.
+Case 3: Distinct arbitrary covariance matrices.<br/>
+In this case, the discriminant functions are fully quadratic
+<block class="block-center">$$g_i(x)=x^TA_ix+b_i^Tx+c_i$$</block>
+In the case c = 2, the single discriminant is given by:
+<block class="block-center">$$g(x)=g_1(x)−g_0(x)=x^TAx+b^Tx+c = 0$$</block>
+The corresponding decision surfaces are hyperquadrics, which can be exactly one of the following:
++ hyperplanes
++ pairs of parallel hyperplanes
++ pairs of intersecting hyperplanes
++ hyperspheres
++ hyperellipsoids
++ hyperparaboloids
++ hyperhyperboloids
 
 ## Alternative Distance Measures
 
