@@ -27,9 +27,10 @@ The classification error is the probability of misclassification:
 
 ### Conditional Classification Error
 The conditional classification error is the error at a particular observed value of $X$: $P(\psi(X)\neq Y|X=x)$<br/>
-$$P(\psi(X)\neq Y|X=x)=P(\psi(X)=0,Y=1|X=x)+P(\psi(X)=1,Y=0|X=x)$$
+Notice that<br/>
+<block class="block-center">$$P(\psi(X)\neq Y|X=x)=P(\psi(X)=0,Y=1|X=x)+P(\psi(X)=1,Y=0|X=x)$$
 $$=I_{\psi(X)=0}P(Y=1|X=x)+I_{\psi(X)=1}P(Y=0|X=x)$$
-$$=I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X))$$<br/>
+$$=I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X))$$</block>
 where the posterior probability function $\eta : R^d \to [0, 1]$,<br/>
 <block class="block-center">$$\eta(X)=P(Y=1|X=x)$$</block>
 The classification error is the “average” conditional classification error:<br/>
