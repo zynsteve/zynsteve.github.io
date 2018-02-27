@@ -27,7 +27,7 @@ The classification error is the probability of misclassification:
 
 ### Conditional Classification Error
 The conditional classification error is the error at a particular observed value of $X$: $P(\psi(X)\neq Y|X=x)$<br/>
-Notice that<br/>
+Notice that
 <block class="block-center">$$P(\psi(X)\neq Y|X=x)=P(\psi(X)=0,Y=1|X=x)+P(\psi(X)=1,Y=0|X=x)$$
 $$=I_{\psi(X)=0}P(Y=1|X=x)+I_{\psi(X)=1}P(Y=0|X=x)$$
 $$=I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X))$$</block>
@@ -39,9 +39,9 @@ $$=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
 $$=E[P(\psi(X)\neq Y|X)]$$<br/>
 Therefore, knowing the error at each point $x\in R^d$ of the feature space, plus the “weight” $p(x)$, is enough to determine the overall classification error.
 ### Classification Error
-$$\epsilon[\psi]=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
+<block class="block-center">$$\epsilon[\psi]=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
 $$=\int_{x\in R^d}(I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X)))p(x)dx$$
-$$=\int_{x|\psi(x)=0}\eta(X)p(x)dx+\int_{x|\psi(x)=1}(1-\eta(X))p(x)dx$$
+$$=\int_{x|\psi(x)=0}\eta(X)p(x)dx+\int_{x|\psi(x)=1}(1-\eta(X))p(x)dx$$</block>
 ### Class-Specific Error Rates
 ### Testing Error Rates
 ### Optimal Classification
