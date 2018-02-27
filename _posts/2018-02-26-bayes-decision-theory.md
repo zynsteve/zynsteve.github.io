@@ -92,7 +92,19 @@ The expected loss upon observing $X=x$ is
 This is called the conditional risk given $X=x$.<br/>
 The overall risk is given by
 <block class="block-center">$$R=E[R(\alpha(X))]=\int_{x\in R^d}{R(\alpha(x))p(x)}dx$$</block>
-To minimize R, we select $\alpha(x)=\alpha_i$ such that $R[\alpha(x)=\alpha_i]$ is minimum, at each value $x\in R^d$. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk $R^∗$.
+To minimize R, we select $\alpha(x)=\alpha_i$ such that $R[\alpha(x)=\alpha_i]$ is minimum, at each value $x\in R^d$. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk $R^∗$.<br/>
+In the special case that a = c = 2, that is, there are two classes and two actions, we have
+<block class="block-center"></block>$$R[\alpha(X)=\alpha_0]=\lambda_{00}P(Y=0|X=x)+\lambda_{01}P(Y=1|X=x)\quad (I)$$
+$$R[\alpha(X)=\alpha_1]=\lambda_{10}P(Y=0|X=x)+\lambda_{11}P(Y=1|X=x)\quad (II)$$</block>
+We decide for action $\alpha_0$ if $(II) > (I)$, that is, if
+<block class="block-center">$$(\lambda_{10}-\lambda_{00})P(Y=0|X=x)>(\lambda_{01}-\lambda_{11})P(Y=1|X=x)$$</block>
+Applying Bayes theorem (and assuming that $lambda_{10} > lambda_{00}$) allows us to write
+<block class="block-center">$$\frac{p(x|Y=0)}{p(x|Y=1)}>\frac{\lambda_{01}-\lambda_{11}}{\lambda_{10}-\lambda_{00}}\frac{P(Y=1)}{P(Y=0)}$$</block>
+that is, we decide for action $\alpha_0$ if the likelihood ratio on the left is larger than the given threshold.<br/>
+The case where
+<block class="block-center">$$\lambda_{00}=\lambda_{11}=0$$
+$$\lambda_{10}=\lambda_{01}=1$$</block>
+is called the $0-1$ loss case. This is the case that we had considered before, if action $\alpha_i$ is simply deciding that the state of nature is $i$, for $i=0,1$.
 
 ## Discriminant Functions
 A classifier can be specified through a set of discriminant functions $\lbrace g_i(x)|i = 0, 1, . . . , c − 1\rbrace$ as:<br/>
@@ -105,9 +117,19 @@ A set of discriminant functions determines a unique classifier, but the converse
 Monotonic transformations to the discriminant functions do not alter the classifier.<br/>
 For example, it is often useful to take logs and represent the Bayes classifier through the discriminant functions
 <block class="block-center">$$g_i(x)=\ln p(x|Y=i)+\ln P(Y=i),\quad i=0,1,...,c−1$$</block>
+In the two-category case, we can define a single discriminant function
+<block class="block-center">$$g(x)=g_1(x)−g_0(x)$$</block>
+In which case the classifies is determined by
+<block class="block-center">$$g(x)>0\Rightarrow\psi(x)=1$$
+$$g(x)\leq0\Rightarrow\psi(x)=0$$</block>
+For example, for the Bayes classifier
+<block class="block-center">$$g(x)=P(Y=1|X=x)-P(Y=0|X=x)$$
+$$g(x)=\ln\frac{p(x|Y=1)}{p(x|Y=0)}+\ln\frac{P(Y=1)}{P(Y=0)}$$</block>
 
 ## Gaussian Model
 Consider the case where the class-conditional densities are multivariate Gaussian densities:
+<block class="block-center">
+$$p(x|Y=i)\sim  N_d(\mu_i,\Sigma_i),\quad i=0,1,...,c−1$$</block>
 In other words,
 <block class="block-center">$$p(x|Y=i)=(2\pi)^{-\frac{d}{2}}|\Sigma_i|^{-\frac{1}{2}}exp(-\frac{1}{2}(x-\mu_i)^T\Sigma_i^{-1}(x-\mu_i))$$</block>
 
