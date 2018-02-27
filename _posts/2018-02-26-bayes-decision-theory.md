@@ -31,12 +31,12 @@ Notice that
 <block class="block-center">$$P(\psi(X)\neq Y|X=x)=P(\psi(X)=0,Y=1|X=x)+P(\psi(X)=1,Y=0|X=x)$$
 $$=I_{\psi(X)=0}P(Y=1|X=x)+I_{\psi(X)=1}P(Y=0|X=x)$$
 $$=I_{\psi(X)=0}\eta(X)+I_{\psi(X)=1}(1-\eta(X))$$</block>
-where the posterior probability function $\eta : R^d \to [0, 1]$,<br/>
+where the posterior probability function $\eta : R^d \to [0, 1]$,
 <block class="block-center">$$\eta(X)=P(Y=1|X=x)$$</block>
-The classification error is the “average” conditional classification error:<br/>
-$$\epsilon[\psi]=P(\psi(X)\neq Y)$$
+The classification error is the “average” conditional classification error:
+<block class="block-center">$$\epsilon[\psi]=P(\psi(X)\neq Y)$$
 $$=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
-$$=E[P(\psi(X)\neq Y|X)]$$<br/>
+$$=E[P(\psi(X)\neq Y|X)]$$</block>
 Therefore, knowing the error at each point $x\in R^d$ of the feature space, plus the “weight” $p(x)$, is enough to determine the overall classification error.
 ### Classification Error
 <block class="block-center">$$\epsilon[\psi]=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
