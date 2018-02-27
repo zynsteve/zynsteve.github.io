@@ -62,7 +62,7 @@ are the class-specific error rates. Given $\psi$, these error rates do not depen
 
 ### Optimal Classification
 (DGL Theorem 2.1) The classifier with minimal error is <block class="block-center">$$\psi^∗(x) = argmax_i P(Y=i|X=x)=I_{\eta(x)>\frac{1}{2}}.$$</block>
-This is the MAP (Maximum A-Posteriori) classifier, more commonly known as the Bayes classifier.</br>
+This is the MAP (Maximum A-Posteriori) classifier, more commonly known as the Bayes classifier.<br/>
 By Bayes theorem, we have, equivalently,
 <block class="block-center">$$\psi^∗(x) = argmax_i P(x|Y=i)P(Y=i)$$</block>
 
