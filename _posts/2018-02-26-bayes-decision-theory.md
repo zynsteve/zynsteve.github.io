@@ -172,8 +172,8 @@ Substituting the values of a and b leads to
 <block class="block-center">$$\epsilon^0[\psi^*]=\Phi\left(\frac{-\frac{1}{2}\delta^2+k}{\delta}\right)$$
 $$\epsilon^1[\psi^*]=\Phi\left(\frac{-\frac{1}{2}\delta^2-k}{\delta}\right)$$</block>
 where
-<block class="block-center">$$k=\ln(P(Y=1)/P(Y=0))$$[\psi^*]
-$$\delta=(\mu_1−\mu_0)^T\Sigma^{−1}(\mu_1−\mu_0)$$</block>
+<block class="block-center">$$k=\ln(P(Y=1)/P(Y=0))$$
+$$\delta=\sqrt{(\mu_1−\mu_0)^T\Sigma^{−1}(\mu_1−\mu_0)}$$</block>
 is the Mahalanobis distance between the populations.<br/>
 The Bayes error is given by
 <block class="block-center">$$\epsilon^*=(1-c)\epsilon^0[\psi^*]+c\epsilon^1[\psi^*]$$
