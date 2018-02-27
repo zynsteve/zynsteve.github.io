@@ -38,6 +38,7 @@ The classification error is the “average” conditional classification error:
 $$=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
 $$=E[P(\psi(X)\neq Y|X)]$$</block>
 Therefore, knowing the error at each point $x\in R^d$ of the feature space, plus the “weight” $p(x)$, is enough to determine the overall classification error.
+
 ### Classification Error
 Using the previous formulas, one can further develop the classification error as:
 <block class="block-center">$$\epsilon[\psi]=\int_{x\in R^d}P(\psi(X)\neq Y|X=x)p(x)dx$$
@@ -48,6 +49,7 @@ From Bayes theorem,
 $$(1-\eta(x))p(x)=p(x|Y=0)P(Y=0)$$</block>
 Replacing these into the previous formula yields an alternative equation for the classification error:
 <block class="block-center">$$\epsilon[\psi]=\int_{\lbrace x|\psi(x)=0\rbrace}P(x|Y=1)P(Y=1)dx+\int_{\lbrace x|\psi(x)=1\rbrace}P(x|Y=0)P(Y=0)dx$$</block>
+
 ### Class-Specific Error Rates
 We can rewrite the previous equation as:
 <block class="block-center">$$\epsilon[\psi]=(1-c)\epsilon^0[\psi]+c\epsilon^1[\psi]$$</block>
@@ -55,12 +57,15 @@ where $c=P(Y=1)$, and
 <block class="block-center">$$\epsilon^0[\psi]=\int_{\lbrace x|\psi(x)=1\rbrace}P(x|Y=0)dx$$
 $$\epsilon^1[\psi]=\int_{\lbrace x|\psi(x)=0\rbrace}P(x|Y=1)dx$$</block>
 are the class-specific error rates. Given $\psi$, these error rates do not depend on the prior probabilities c and $1 − c$, while the overall error $\epsilon^0[\psi]$ clearly does.
+
 ### Testing Error Rates
+
 ### Optimal Classification
 (DGL Theorem 2.1) The classifier with minimal error is <block class="block-center">$$\psi^∗(x) = argmax_i P(Y=i|X=x)=I_{\eta(x)>\frac{1}{2}}.$$</block>
 This is the MAP (Maximum A-Posteriori) classifier, more commonly known as the Bayes classifier.</br>
 By Bayes theorem, we have, equivalently,
 <block class="block-center">$$\psi^∗(x) = argmax_i P(x|Y=i)P(Y=i)$$</block>
+
 ## Bayes Error
 The error of the Bayes classifier $\epsilon^*=\epsilon[\psi^*]$ is a fundamental quantity in PR, known as the Bayes error.</br>
 Note that the Bayes classifier is given by<br/>
@@ -69,33 +74,60 @@ Therefore<br/>
 $$\epsilon^*=\int_{\eta(x)<1-\eta(x)}\eta(X)p(x)dx+\int_{\eta(x)\geq1-\eta(x)}(1-\eta(X))p(x)dx$$
 $$=E[min\lbrace\eta(X),1-\eta(X)\rbrace]$$<br/>
 In particular, we always have $\epsilon^*\leq\frac{1}{2}$.
+
 ## Bayes Decision Theory
+Suppose that upon observing X = x one takes an action α(x) in a finite set of a possible actions<br/>
+<block class="block-center">$$\alpha(x)\in\lbraceα_0,α_1,...,α_{a−1}\rbrace$$</block>
+Suppose there are c states of nature (i.e., classes), $Y \in\lbrace0,1,...,c−1\rbrace$. Each action incurs a loss <block class="block-center">$λ_{ij} = \text{cost of taking action αi when true state of nature is j}$</block>
+Action $i$ may be simply deciding that the true state of nature is $i$, but we may have $a>c$, in which case one of the extra actions might be rejecting to make a decision.</br>
+The losses indicate, for example, the cost of making incorrect decisions.
 The expected loss upon observing $X=x$ is
 <block class="block-center">$$R[\alpha(x)=\alpha_i] = \sum_{j=0}^{c-1}\lambda_{ij}P(Y=j|X=x)$$</block>
 This is called the conditional risk given $X=x$.</br>
 The overall risk is given by
 <block class="block-center">$$R=E[R(\alpha(X))]=\int_{x\in R^d}{R(\alpha(x))p(x)}dx$$</block>
-
 To minimize R, we select $\alpha(x)=\alpha_i$ such that $R[\alpha(x)=\alpha_i]$ is minimum, at each value $x\in R^d$. This optimal strategy is called the Bayes decision rule, with corresponding optimal Bayes risk $R^∗$.
 
 ## Discriminant Functions
+A classifier can be specified through a set of discriminant functions $\lbrace g_i(x)|i = 0, 1, . . . , c − 1\rbrace$ as:<br/>
+<block class="block-center">$$\psi(x)=argmax_i g_i(x)$$</block>
+The $i−th$ decision region is determined by
+<block class="block-center">$$g_i(x)>g_j(x),\quad\text{for all}\quad i\neq j$$</block>
+The loci of ties among largest discriminant functions determine the decision surfaces.
 <block class="block-center">$$g_i(x)=\ln p(x|Y=i)+\ln P(Y=i),\quad i=0,1,\cdots,c-1$$</block>
+A set of discriminant functions determines a unique classifier, but the converse is not true: the same classifier can be determined by multiple sets of discriminant functions.<br/>
+Monotonic transformations to the discriminant functions do not alter the classifier.</br>
+For example, it is often useful to take logs and represent the Bayes classifier through the discriminant functions
+<block class="block-center">$$g_i(x)=\ln p(x|Y=i)+\ln P(Y=i),\quad i=0,1,...,c−1$$</block>
 
 ## Gaussian Model
 Consider the case where the class-conditional densities are multivariate Gaussian densities:
-In other words, <block class="block-center">$$p(x|Y=i)=(2\pi)^{-\frac{d}{2}}|\Sigma_i|^{-\frac{1}{2}}exp(-\frac{1}{2}(x-\mu_i)^T\Sigma_i^{-1}(x-\mu_i))$$</block>
+In other words,
+<block class="block-center">$$p(x|Y=i)=(2\pi)^{-\frac{d}{2}}|\Sigma_i|^{-\frac{1}{2}}exp(-\frac{1}{2}(x-\mu_i)^T\Sigma_i^{-1}(x-\mu_i))$$</block>
+
 ### Nearest Mean Classifier
 Case 1: Equal spherical covariance matrices.
+In this case,
+<block class="block-center">$$\Sigma_i=\sigma^2I_d\Rightarrow\Sigma^{−1}=\frac{1}{\sigma^2}I_d,\quad i=0,1,...,c−1$$</block>
+The constant term $\ln|\Sigma_i|=−2d\ln\sigma$ can be dropped, leading to
 <block class="block-center">$$g_i(x)=-\frac{1}{2}\frac{||x-\mu_i||^2}{\sigma^2}+\ln P(Y=i)$$</block>
 If the classes are equally-likely, more terms can be dropped and we obtain:
 <block class="block-center">$$g_i(x)=-\frac{1}{2}{||x-\mu_i||^2}$$</block>
 This is called the optimal Nearest-Mean Classifier.
+![Nearest Mean Classifier](https://ask.julyedu.com/uploads/answer/20150203/212bec42a04acaf238e72b613dba8371.png)
+
 ### Linear Discriminant
 Case 2: Equal arbitrary covariance matrices.
+In this case,
+<block class="block-center">$$\Sigma_i=\Sigma,\quad i=0,1,...,c−1$$</block>
+
 ### Quadratic Discriminant
+Case 3: Distinct arbitrary covariance matrices.
 
 ## Alternative Distance Measures
+
 ### Kolmogorov’s Variational Distance
+
 ### Nearest-Neighbor Distance
 The Nearest-Neighbor Distance is given by
 <block class="block-center">$$\epsilon^*=E[2\eta(x)(1-\eta(x))]$$</block>
@@ -107,8 +139,10 @@ Furthermore, it is clear that
 <block class="block-center">$$\epsilon_{NN}=0\Leftrightarrow\eta(x)\in\lbrace0,1\rbrace w.prob.1\Leftrightarrow\epsilon^*=0$$</block>
 <block class="block-center">$$\epsilon_{NN}=\frac{1}{2}\Leftrightarrow\eta(x)=\frac{1}{2}w.prob.1\Leftrightarrow\epsilon^*=\frac{1}{2}$$</block>
 so $\epsilon_{NN}$ carries plenty of information about $\epsilon^*$.
+
 ### Mahalanobis Distance
 The Mahalanobis distance, defined previously as
 <block class="block-center">$$\delta=\sqrt{(\mu_1-\mu_0)^T\Sigma^{-1}(\mu_1-\mu_0)}$$</block>
 is a an alternative distance measure that is related to the Bayes error.
+
 ## F-errors
