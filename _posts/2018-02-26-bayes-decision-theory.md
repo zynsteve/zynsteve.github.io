@@ -67,12 +67,14 @@ By Bayes theorem, we have, equivalently,
 <block class="block-center">$$\psi^∗(x) = argmax_i P(x|Y=i)P(Y=i)$$</block>
 
 ## Bayes Error
-The error of the Bayes classifier $$\epsilon^*=\epsilon[\psi^*]$$ is a fundamental quantity in PR, known as the Bayes error.</br>
-Note that the Bayes classifier is given by<br/>
+The error of the Bayes classifier
+<block class="block-center">$$\epsilon^*=\epsilon[\psi^*]$$</block>
+is a fundamental quantity in PR, known as the Bayes error.</br>
+Note that the Bayes classifier is given by
 <block class="block-center">$$\psi^*(x)=\begin{cases}1, \eta(x)>1-\eta(x)\quad(\eta(x)>\frac{1}{2})\\0,\eta(x)\leq1-\eta(x)\quad(\eta(x)\leq\frac{1}{2})\end{cases}$$</block>
-Therefore<br/>
-$$\epsilon^*=\int_{\eta(x)<1-\eta(x)}\eta(X)p(x)dx+\int_{\eta(x)\geq1-\eta(x)}(1-\eta(X))p(x)dx$$
-$$=E[min\lbrace\eta(X),1-\eta(X)\rbrace]$$<br/>
+Therefore
+<block class="block-center">$$\epsilon^*=\int_{\eta(x)<1-\eta(x)}\eta(X)p(x)dx+\int_{\eta(x)\geq1-\eta(x)}(1-\eta(X))p(x)dx$$
+$$=E[min\lbrace\eta(X),1-\eta(X)\rbrace]$$</block>
 In particular, we always have $\epsilon^*\leq\frac{1}{2}$.
 
 ## Bayes Decision Theory
