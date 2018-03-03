@@ -1,6 +1,6 @@
 ---
-title: My First Post
-description: Welcome to my website!
+title: Sorting Algorithms
+description: Comparsion and Java Implementation of various sorting algorithms.
 categories:
 - Algorithm
 tags:
