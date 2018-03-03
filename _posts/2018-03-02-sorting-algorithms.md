@@ -32,7 +32,7 @@ public void selectionSort (int[] array) {
 Time complexity: $O(n^2)$
 
 ## Insertion Sort
-```Java
+```java
 public void insertionSort (int[] array) {
     int i, j, key, temp;
     for (i = 1; i < array.length; i++) {
@@ -50,7 +50,7 @@ public void insertionSort (int[] array) {
 Time complexity: $O(n^2)$
 
 ## Bubble Sort
-```Java
+```java
 public void bubbleSort (int[] array) {
     int i, j, temp = 0;
     for (i = 0; i < array.length - 1; i++) {
@@ -67,7 +67,7 @@ public void bubbleSort (int[] array) {
 Time complexity: $O(n^2)$
 
 ## Merge Sort
-```Java
+```java
 public void mergeSort(int[] array) {
     mergeSort(array, 0, array.length - 1);
 }
@@ -106,7 +106,7 @@ public void merge(int[] array, int lowIndex, int midIndex, int highIndex) {
 Time complexity: $O(n\log n)$
 
 ## Quick Sort
-```Java
+```java
 public void quickSort(int[] array) {
     quickSort(array, 0, array.length-1);
 }
