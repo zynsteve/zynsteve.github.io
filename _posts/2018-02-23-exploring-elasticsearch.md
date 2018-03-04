@@ -154,14 +154,14 @@ Now, if we want to search for quick brown, we just need to find the documents in
 ```
 PUT linkedin/job/1
 {
-"title": "Java Software Engineer",
-"salary": 150000,
-"company": {
-"name": "Magic Company",
-"address": "California"
-},
-"post_date": "02/15/2018",
-"application": 150
+  "title": "Java Software Engineer",
+  "salary": 150000,
+  "company": {
+    "name": "Magic Company",
+    "address": "California"
+  },
+  "post_date": "02/15/2018",
+  "application": 150
 }
 ```
 ### get
@@ -172,9 +172,9 @@ GET linkedin/job/1?_source
 ```
 POST linkedin/job/1/_update
 {
-"doc": {
-"salary": 200000
-}
+  "doc": {
+    "salary": 200000
+  }
 }
 ```
 ### delete
