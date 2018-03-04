@@ -147,3 +147,36 @@ Now, if we want to search for quick brown, we just need to find the documents in
 |quick|X||
 |---|---|---|
 |Total|2|1|
+
+## Elasticsearch CRUD
+### create
+```
+PUT linkedin/job/1
+{
+"title": "Java Software Engineer",
+"salary": 150000,
+"company": {
+"name": "Magic Company",
+"address": "California"
+},
+"post_date": "02/15/2018",
+"application": 150
+}
+```
+### get
+```
+GET linkedin/job/1?_source
+```
+### update
+```
+POST linkedin/job/1/_update
+{
+"doc": {
+"salary": 200000
+}
+}
+```
+### delete
+```
+DELETE linkedin/job/1
+```
