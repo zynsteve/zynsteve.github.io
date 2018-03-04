@@ -139,6 +139,7 @@ To create an inverted index, we first split the content field of each document i
 |over|X|X|
 |summer||X|
 |the|X||
+
 Now, if we want to search for quick brown, we just need to find the documents in which each term appears:
 
 |Term|Doc_1|Doc_2|
