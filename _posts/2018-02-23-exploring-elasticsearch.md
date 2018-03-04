@@ -98,7 +98,7 @@ Indexes are horizontally subdivided into shards. This means each shard contains 
 Elasticsearch allows a user to create replicas of their indexes and shards. Replication not only helps in increasing the availability of data in case of failure, but also improves the performance of searching by carrying out a parallel search operation in these replicas.
 
 ### Comparsion with MySQL
-|---|---|
+
 |Elasticsearch|MySQL|
 |---|---|
 |index|database|
@@ -107,7 +107,7 @@ Elasticsearch allows a user to create replicas of their indexes and shards. Repl
 |field|column|
 
 ### HTTP Method
-|-----|-----|-----|-----|
+
 |HTTP Verb|CRUD|Entire Collection (e.g. /customers)|Specific Item (e.g. /customers/{id})|
 |-----|-----|-----|-----|
 |POST|Create|201 (Created), 'Location' header with link to /customers/{id} containing new ID.|404 (Not Found), 409 (Conflict) if resource already exists..|
