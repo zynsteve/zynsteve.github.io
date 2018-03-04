@@ -46,19 +46,20 @@ Elasticsearch allows a user to create replicas of their indexes and shards. Repl
 
 ## Installation
 ### elasticsearch-rtf
-Elasticsearch with built-in APIs
-download
+Elasticsearch with built-in APIs.
+#### download
 ```bash
 git clone git://github.com/medcl/elasticsearch-rtf.git -b master --depth 1
 ```
-run
+#### run
 ```bash
 cd elasticsearch/bin
 ./elasticsearch
 ```
-open http://localhost:9200/
+#### open
+[http://localhost:9200/](http://localhost:9200/)
 ![elasticsearch-rtf](/assets/images/post/exploring-elasticsearch/elasticsearch-rtf.png)
-note:
+#### note:
 add configurtions in elasticsearch-rtf/config/elasticsearch.yml
 ```yaml
 http.cors.enabled: true
@@ -68,28 +69,30 @@ http.cors.allow-headers: "X-Requested-With, Content-Type, Content-Length, X-User
 ```
 
 ### elasticsearch-head
-A web front end for an elastic search cluster
-download
+A web front end for an elastic search cluster.
+#### download
 ```bash
 git clone git://github.com/mobz/elasticsearch-head.git
 ```
-run
+#### run
 ```bash
 cd elasticsearch-head
 npm install
 npm run start
 ```
-open http://localhost:9100/
+#### open
+[http://localhost:9100/](http://localhost:9100/)
 ![elasticsearch-head](/assets/images/post/exploring-elasticsearch/elasticsearch-head.png)
 
 ### Kibana
 Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster.
-download
+#### download
 https://www.elastic.co/downloads/kibana
-run
+#### run
 ```bash
 cd kibana/bin
 ./kibana
 ```
-open http://127.0.0.1:5601/
+#### open
+[http://localhost:5601/](http://localhost:5601/)
 ![kibana](/assets/images/post/exploring-elasticsearch/kibana.png)
