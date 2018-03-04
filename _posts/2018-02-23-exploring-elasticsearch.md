@@ -106,7 +106,7 @@ Elasticsearch allows a user to create replicas of their indexes and shards. Repl
 |document|row|
 |field|column|
 
-### HTTP Method
+### HTTP Methods
 
 |HTTP Verb|CRUD|Entire Collection (e.g. /customers)|Specific Item (e.g. /customers/{id})|
 |-----|-----|-----|-----|
@@ -115,3 +115,35 @@ Elasticsearch allows a user to create replicas of their indexes and shards. Repl
 |PUT|Update/Replace|405 (Method Not Allowed), unless you want to update/replace every resource in the entire collection.|200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.|
 |PATCH|Update/Modify|405 (Method Not Allowed), unless you want to modify the collection itself.|200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.|
 |DELETE|Delete|405 (Method Not Allowed), unless you want to delete the whole collection—not often desirable.|200 (OK). 404 (Not Found), if ID not found or invalid.|
+
+### Inverted Index
+Elasticsearch uses a structure called an inverted index, which is designed to allow very fast full-text searches. An inverted index consists of a list of all the unique words that appear in any document, and for each word, a list of the documents in which it appears.
+
+For example, let’s say we have two documents, each with a content field containing the following:
+
+The quick brown fox jumped over the lazy dog
+Quick brown foxes leap over lazy dogs in summer
+To create an inverted index, we first split the content field of each document into separate words (which we call terms, or tokens), create a sorted list of all the unique terms, and then list in which document each term appears. The result looks something like this:
+
+|Term|Doc_1|Doc_2|
+|---|---|---|
+|quick||X|
+|The|X|
+|brown|X|X|
+|dog|X||
+|fox|X||
+|in||X|
+|jumped|X||
+|lazy|X|X|
+|leap||X|
+|over|X|X|
+|summer||X|
+|the|X||
+Now, if we want to search for quick brown, we just need to find the documents in which each term appears:
+
+|Term|Doc_1|Doc_2|
+|---|---|---|
+|brown|X|X|
+|quick|X||
+|---|---|---|
+|Total|2|1|
