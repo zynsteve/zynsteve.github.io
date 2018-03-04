@@ -45,6 +45,8 @@ Indexes are horizontally subdivided into shards. This means each shard contains 
 Elasticsearch allows a user to create replicas of their indexes and shards. Replication not only helps in increasing the availability of data in case of failure, but also improves the performance of searching by carrying out a parallel search operation in these replicas.
 
 ## Installation
+### elasticsearch-rtf
+Elasticsearch with built-in APIs
 download
 ```bash
 git clone git://github.com/medcl/elasticsearch-rtf.git -b master --depth 1
@@ -54,4 +56,40 @@ run
 cd elasticsearch/bin
 ./elasticsearch
 ```
-![run](/assets/images/post/exploring-elasticsearch/run.png)
+open http://localhost:9200/
+![elasticsearch-rtf](/assets/images/post/exploring-elasticsearch/elasticsearch-rtf.png)
+note:
+add configurtions in elasticsearch-rtf/config/elasticsearch.yml
+```yaml
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
+http.cors.allow-headers: "X-Requested-With, Content-Type, Content-Length, X-User"
+```
+
+### elasticsearch-head
+A web front end for an elastic search cluster
+download
+```bash
+git clone git://github.com/mobz/elasticsearch-head.git
+```
+run
+```bash
+cd elasticsearch-head
+npm install
+npm run start
+```
+open http://localhost:9100/
+![elasticsearch-head](/assets/images/post/exploring-elasticsearch/elasticsearch-head.png)
+
+### Kibana
+Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster.
+download
+https://www.elastic.co/downloads/kibana
+run
+```bash
+cd kibana/bin
+./kibana
+```
+open http://127.0.0.1:5601/
+![kibana](/assets/images/post/exploring-elasticsearch/kibana.png)
