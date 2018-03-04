@@ -181,3 +181,58 @@ POST linkedin/job/1/_update
 ```
 DELETE linkedin/job/1
 ```
+
+## Mapping
+```
+PUT linkedin
+{
+  "mappings": {
+    "job": {
+      "properties": {
+        "title": {
+          "store": true,
+          "type": "text"
+        },
+        "company_name": {
+          "store": true,
+          "type": "keyword"
+        },
+        "description": {
+          "type": "text"
+        },
+        "comments": {
+          "type": "integer"
+        },
+        "post_date": {
+          "type": "date",
+          "format": "MM/dd/yyyy"
+        }
+      }
+    }
+  }
+}
+```
+
+## Search
+### match
+```
+GET linkedin/job/_search
+{
+  "query": {
+    "match": {
+      "title": "Java Developer"
+    }
+  }
+}
+```
+### term
+```
+GET linkedin/job/_search
+{
+  "query": {
+    "term": {
+      "title": "Java"
+    }
+  }
+}
+```
