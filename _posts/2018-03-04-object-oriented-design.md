@@ -9,16 +9,18 @@ tags:
 
 
 ## Introduction
-Can you design an elevator system?
-Can you design scheduler for elevator system?
++ Can you design an elevator system?
++ Can you design scheduler for elevator system?
 
 ## Design a Parking Lot
 ### Thinking Process
 #### Key Words
 + Parking lot
 + Vehicle
+
 #### Core object
 in and out
+
 #### Use Case
 + Reserve
 + Serve
