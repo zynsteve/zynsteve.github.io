@@ -34,3 +34,6 @@ What are the differences between these parking lots?
 ![parking lots](/assets/images/post/object-oriented-design/parking-lots.png)
 What are the differences between these vehicles?
 ![vehicles](/assets/images/post/object-oriented-design/vehicles.png)
+
+### Design
+![design](/assets/images/post/object-oriented-design/design.png)
