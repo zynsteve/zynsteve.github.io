@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![Java Learning Path](https://www.powerhouserecruiters.com/wp-content/uploads/2017/11/java.png)
+![Java Learning Path](www.powerhouserecruiters.com/wp-content/uploads/2017/11/java.png)
 ## 1. Basics
 
 ### Data Type
