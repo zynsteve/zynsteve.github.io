@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![Java Learning Path](www.powerhouserecruiters.com/wp-content/uploads/2017/11/java.png)
+![Java Learning Path](http://wtricks.com.br/linguagens-de-programacao-populares-2018/)
 ## 1. Basics
 
 ### Data Type
