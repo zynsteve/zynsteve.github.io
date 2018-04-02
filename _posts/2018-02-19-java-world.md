@@ -104,6 +104,7 @@ dynamic / run time polymorphism
 Intent:
 + Ensure that only one instance of a class is created.
 + Provide a global point of access to the object.
+
 ```java
 public class Singleton {
     private static Singleton instance;
@@ -125,6 +126,7 @@ Intent:
 + The client needs a product, but instead of creating it directly using the new operator, it asks the factory object for a new product, providing the information about the type of object it needs.
 + The factory instantiates a new concrete product and then returns to the client the newly created product(casted to abstract product class).
 + The client uses the products as abstract products without being aware about their concrete implementation.
+
 ```java
 public class ProductFactory {
     public Product createProduct(String ProductID) {
