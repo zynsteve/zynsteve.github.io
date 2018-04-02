@@ -44,14 +44,16 @@ interface A {
     void d();
 }
 
-// Creating abstract class that provides the implementation of one method of A interface
+// Creating abstract class that provides the
+// implementation of one method of A interface
 abstract class B implements A {
     public void c() {
         System.out.println("I am C");
     }
 }
 
-// Creating subclass of abstract class, now we need to provide the implementation of rest of the methods
+// Creating subclass of abstract class,
+// now we need to provide the implementation of rest of the methods
 class M extends B {
     public void a() {
         System.out.println("I am a");
