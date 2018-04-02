@@ -87,9 +87,7 @@ Encapsulation in Java is a mechanism of wrapping the data (variables) and code a
 To achieve encapsulation in Java:
 + Declare the variables of a class as private.
 + Provide public setter and getter methods to modify and view the variables values.
-
 ### Inheritance
-
 ### Polymorphism
 #### Overloading
 
@@ -103,5 +101,38 @@ dynamic / run time polymorphism
 
 ### Design Pattern
 #### Singleton Pattern
+Intent:
++ Ensure that only one instance of a class is created.
++ Provide a global point of access to the object.
+```java
+public class Singleton {
+    private static Singleton instance;
+    private Singleton() {
+        ...
+    }
+    public static synchronized Singleton getInstance() {
+        if (instance == null) instance = new Singleton();
+        return instance;
+    }
+    ...
+    public void doSomething() {
+        ...
+    }
+}
+```
 #### Factory Pattern
-
+Intent:
++ The client needs a product, but instead of creating it directly using the new operator, it asks the factory object for a new product, providing the information about the type of object it needs.
++ The factory instantiates a new concrete product and then returns to the client the newly created product(casted to abstract product class).
++ The client uses the products as abstract products without being aware about their concrete implementation.
+```java
+public class ProductFactory {
+    public Product createProduct(String ProductID) {
+        if (id == ID1) return new OneProduct();
+        if (id == ID2) return new AnotherProduct();
+        ... // so on for the other Ids
+        return null; // if the id doesn't have any of the expected values
+    }
+    ...
+}
+```
