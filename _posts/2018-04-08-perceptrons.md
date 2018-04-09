@@ -39,5 +39,5 @@ Correct classification of xi happens when
 <block class="block-center">$$a^Tx_i^\prime\geq0 \quad \text{if}\quad y_i=1$$</block>
 <block class="block-center">$$a^Tx_i^\prime<0 \quad \text{if}\quad y_i=0$$</block>
 Trick: flip the sign of $x_i^\prime$ if $y_i=0$ so that<br/>
-correct classification of $x_i\Leftrightarrow a^Tx_i^\prime\geq0$
+correct classification of $x_i\Leftrightarrow a^Tx_i^\prime\geq0$<br/>
 For convenience, the prime will be omitted from the augmented vector in what follows.
