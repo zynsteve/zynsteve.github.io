@@ -14,6 +14,7 @@ Both parametric and nonparametric classification rules are plug-in rules, that i
 We will consider now a different idea:
 * Assume a set of discriminants (decision boundaries)
 * Search for the discriminant that best fits the data by optimizing some objective criterion (“learning”)
+
 This is the basic idea behind many popular “machine learning” classification rules:<br/>
 Perceptrons, Support Vector Machines, Neural Networks, Decision Trees
 
@@ -23,5 +24,5 @@ Assume a linear discriminant function
 <block class="block-center">$$g_n(x)=a_0+\sum_{i=1}^{d}{a_i x_i}$$</block>
 so that the designed classifier is given by
 <block class="block-center">$$\psi_n(x)=\begin{cases}1, &\text{if $a_0+\sum{a_i x_i\geq0}$}\\0,&\text{otherwise}\end{cases}$$</block>
-Adjust (“learn”) the parameters a0, a1, . . . , ad based on the training data.
+Adjust (“learn”) the parameters $a_0, a_1, . . . , a_d$ based on the training data.
 ![perceptron](/assets/images/post/perceptrons/perceptron.png)
