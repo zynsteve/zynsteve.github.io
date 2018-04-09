@@ -38,6 +38,6 @@ Given training data point $(x_i, y_i)$, define likewise the augmented vector $x_
 Correct classification of xi happens when
 <block class="block-center">$$a^Tx_i^\prime\geq0 \quad \text{if}\quad y_i=1$$</block>
 <block class="block-center">$$a^Tx_i^\prime<0 \quad \text{if}\quad y_i=0$$</block>
-Trick: flip the sign of $x_i^\prime$ if $y_i=0$ so that<br/>
-correct classification of $x_i\Leftrightarrow a^Tx_i^\prime\geq0$<br/>
+Trick: flip the sign of $x_i^\prime$ if $y_i=0$ so that
+<block class="block-center">$$\text{correct classification of}\quad x_i\Leftrightarrow a^Tx_i^\prime\geq0$$</block>
 For convenience, the prime will be omitted from the augmented vector in what follows.
