@@ -27,3 +27,11 @@ so that the designed classifier is given by
 <block class="block-center">$$\psi_n(x)=\begin{cases}1, &\text{if $a_0+\sum{a_i x_i\geq0}$}\\0,&\text{otherwise}\end{cases}$$</block>
 Adjust (“learn”) the parameters $a_0, a_1, . . . , a_d$ based on the training data.
 ![perceptron](/assets/images/post/perceptrons/perceptron.png)
+
+## Augmented Feature Vector
+Given the feature vector $x \in R^d$, consider the augmented vector:
+<block class="block-center">$$x^\prime=\begin{bmatrix}1\\x\end{bmatrix}\in R^{d+1}$$</block>
+so that the perceptron classifier is given by
+<block class="block-center">$$\psi_n(x^\prime)=\begin{cases}1, &\text{if $a^Tx^\prime\geq0$}\\0,&\text{otherwise}\end{cases}$$</block>
+where $a=[a_0, a_1, ..., a_d]^T\in R^{d+1}$ is the parameter vector.<br/>
+Given training data point $(x_i, y_i)$, define likewise the augmented vector $x_i^\prime$, for $i = 1, ..., n$.
