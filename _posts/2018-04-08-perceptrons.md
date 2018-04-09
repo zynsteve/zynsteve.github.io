@@ -24,3 +24,4 @@ Assume a linear discriminant function
 so that the designed classifier is given by
 <block class="block-center">$$\psi_n(x)=\begin{cases}1, &\text{if $a_0+\sum{a_i x_i\geq0}$}\\0,&\text{otherwise}\end{cases}$$</block>
 Adjust (“learn”) the parameters a0, a1, . . . , ad based on the training data.
+![perceptron](/assets/images/post/perceptrons/perceptron.png)
