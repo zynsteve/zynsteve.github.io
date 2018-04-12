@@ -108,7 +108,7 @@ Time complexity: $O(n\log n)$
 ## Quick Sort
 ```java
 public void quickSort(int[] array) {
-    quickSort(array, 0, array.length-1);
+    quickSort(array, 0, array.length - 1);
 }
 
 private void quickSort(int[] array, int low, int high) {
