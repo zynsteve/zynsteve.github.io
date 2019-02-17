@@ -9,6 +9,7 @@ tags:
 
 
 ![profit](/assets/images/post/best-time-to-buy-and-sell-stock/profit.png)
+### Kadane's Algorithm
 ```java
 public int maxProfit(int[] prices) {
     int maxCur = 0, maxSoFar = 0;
