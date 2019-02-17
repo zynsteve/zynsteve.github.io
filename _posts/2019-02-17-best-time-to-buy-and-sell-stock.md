@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![profit](/assets/images/post/object-oriented-design/design.png)
+![profit](/assets/images/post/best-time-to-buy-and-sell-stock/profit.png)
 ```java
 public int maxProfit(int[] prices) {
     int maxCur = 0, maxSoFar = 0;
