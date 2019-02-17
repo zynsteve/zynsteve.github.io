@@ -1,8 +1,8 @@
 ---
-title: Best Time to Buy and Sell Stock
+title: LeetCode 121: Best Time to Buy and Sell Stock
 description: Kadane's Algorithm
 categories:
- - Algorithm
+- Algorithm
 tags:
- - Algorithm
+- Algorithm
 ---
