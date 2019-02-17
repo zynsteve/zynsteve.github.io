@@ -8,6 +8,7 @@ tags:
 ---
 
 
+![profit](/assets/images/post/object-oriented-design/design.png)
 ```java
 public int maxProfit(int[] prices) {
     int maxCur = 0, maxSoFar = 0;
