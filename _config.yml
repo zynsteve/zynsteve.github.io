@@ -414,7 +414,7 @@ baidushare: true
 baidushare:
   type: button
   
-skip_rende: static/**
+skip_render: static/**
 
 # Share
 #jiathis:
