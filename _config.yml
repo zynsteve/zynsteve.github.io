@@ -413,6 +413,8 @@ livere_uid: MTAyMC80MjcwMS8xOTI0OA==
 baidushare: true
 baidushare:
   type: button
+  
+skip_rende: static/**
 
 # Share
 #jiathis:
