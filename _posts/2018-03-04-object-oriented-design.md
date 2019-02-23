@@ -4,11 +4,10 @@ categories:
 - OOD
 tags:
 - Java
+photos:
+- "/assets/images/post/object-oriented-design/design.png"
 ---
 
-
-![design](/assets/images/post/object-oriented-design/design.png)
-<!-- more -->
 
 ## Introduction
 + Can you design an elevator system?
