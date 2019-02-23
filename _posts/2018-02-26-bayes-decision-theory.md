@@ -4,14 +4,14 @@ categories:
 - Tutorial
 tags:
 - Pattern Recognition
+photos:
+- "https://www.byclb.com/TR/Tutorials/neural_networks/Ch_4_dosyalar/image001.gif"
 ---
 
 
-![Class-Conditional Densities](https://www.byclb.com/TR/Tutorials/neural_networks/Ch_4_dosyalar/image001.gif)
-<!-- more -->
-
 ## Class-Conditional Densities
 The relative frequencies of each label as a function of predictor values are given by the class-conditional densities $p(x|Y=i)$, for $i=0,1$.
+![Class-Conditional Densities](https://www.byclb.com/TR/Tutorials/neural_networks/Ch_4_dosyalar/image001.gif)
 
 ## Posterior Probabilities
 Using Bayes’ theorem, we can start from the prior probabilities and class-conditional densities and find the posterior probability of $Y=i$ given that $X=x$ has been observed, for $i=0,1$:
