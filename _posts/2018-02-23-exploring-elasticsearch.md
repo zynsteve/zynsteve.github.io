@@ -13,6 +13,7 @@ tags:
 > Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
 Elasticsearch is a search seriver based on Lucene. It provides a distributed full-text search engine based on RESTful web API. Elasticsearch is developed with Java, and is deployed under Apache licence. It is a popular enterprise search engine.
+<!-- more -->
 
 ## Why Elasticsearch
 The disadvantages of relational database:
