@@ -1,11 +1,11 @@
 ---
 title: Object Oriented Design
-description: Everything is an object!
 categories:
 - OOD
 tags:
 - Java
 ---
+
 
 ![design](/assets/images/post/object-oriented-design/design.png)
 <!-- more -->
