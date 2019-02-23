@@ -3,7 +3,7 @@ title: Exploring Elasticsearch
 categories:
 - Tutorial
 tags:
-- Database
+- Search Engine
 ---
 
 

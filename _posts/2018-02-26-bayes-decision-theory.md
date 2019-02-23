@@ -3,7 +3,7 @@ title: Bayes Decision Theory
 categories:
 - Tutorial
 tags:
-- Pattern Recognition
+- Machine Learning
 ---
 
 

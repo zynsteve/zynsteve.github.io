@@ -1,7 +1,7 @@
 ---
 title: Object Oriented Design
 categories:
-- OOD
+- Tutorial
 tags:
 - Java
 ---
