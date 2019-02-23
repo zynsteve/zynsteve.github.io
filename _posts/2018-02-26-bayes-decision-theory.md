@@ -1,6 +1,5 @@
 ---
 title: Bayes Decision Theory
-description: Learning Bayes Decision Theory.
 categories:
 - Tutorial
 tags:
@@ -8,10 +7,10 @@ tags:
 ---
 
 
-![Bayes Decision Theory](https://onlinecourses.science.psu.edu/stat857/sites/onlinecourses.science.psu.edu.stat857/files/lesson10/image_02.gif)
 ## Class-Conditional Densities
 The relative frequencies of each label as a function of predictor values are given by the class-conditional densities $p(x|Y=i)$, for $i=0,1$.
 ![Class-Conditional Densities](https://www.byclb.com/TR/Tutorials/neural_networks/Ch_4_dosyalar/image001.gif)
+<!-- more -->
 
 ## Posterior Probabilities
 Using Bayes’ theorem, we can start from the prior probabilities and class-conditional densities and find the posterior probability of $Y=i$ given that $X=x$ has been observed, for $i=0,1$:
