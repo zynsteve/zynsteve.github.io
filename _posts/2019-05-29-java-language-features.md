@@ -1,6 +1,10 @@
 ---
 title: Java Language Features
 description: Java language features
+categories:
+- Notes
+tags:
+- Java
 ---
 
 
