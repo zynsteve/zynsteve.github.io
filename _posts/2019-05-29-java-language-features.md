@@ -10,9 +10,9 @@ tags:
 
 ![java](/assets/images/post/java-language-features/java.png)
 
-## Difference between parseInt and valueOf
-# parseInt
-**It removes leading 0s**.
+# Difference between parseInt and valueOf
+## parseInt
+*It removes leading 0s*.
 ```Java
 /**
  * Parses the specified string as a signed decimal integer value.
@@ -30,7 +30,7 @@ public static Integer valueOf(String string) throws NumberFormatException {
 }
 ```
 
-# valueOf
+## valueOf
 ```Java
 /**
  * Parses the specified string as a signed decimal integer value. The ASCII
