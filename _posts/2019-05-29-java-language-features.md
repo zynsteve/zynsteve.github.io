@@ -4,4 +4,4 @@ description: Java language features
 ---
 
 
-![java](/assets⁩/⁨images⁩/post/java-language-features/java.png)
+![java](/assets/images/post/java-language-features/java.png)
