@@ -46,3 +46,14 @@ public static int parseInt(String string) throws NumberFormatException {
     return parseInt(string, 10);
 }
 ```
+
+
+# 2. split()
+```Java
+split("\\s+")
+```
+will split the string into string of array with separator as space or multiple spaces.
+```Java
+\s+
+```
+is a regular expression for one or more spaces.
